@@ -1,0 +1,289 @@
+{%extends 'html/base.html'%}
+{%load static%}
+
+
+
+
+{%block body_block%}
+<div class="d-none d-md-block">
+  <section id="home_">
+    <div style="background-image:url({%static 'back.gif'%})"   class="welcome text-dark" >
+      <p id="cus_font" style="color:white;font-size:5vw;" >Hi,Iam <p>
+      <h2 id="cus_font" style="font-size:4vw;color:white;">Sumukh Moudgalya</h2>
+      <h2 style="color:white;text-align:center;margin-left:15%;margin-right:15%;padding-top:2vw;">Iam an undergrad ECE student at JSSTU university.Welcome to my portfolio page containing all my technical skills and all the projects I have worked on.I have worked on projects based on web-development,app-development,machine-learning,Iot projects  </h2>
+    </div>
+
+  </section>
+
+</div>
+<div class="box">
+  <div class="d-none d-md-block">
+    <p id="cus_font" style="color:white;text-align:center;font-size:2vw;margin-top:3vw;">Technical skills</p>
+  </div>
+  <div class="d-none d-md-block cus  mb-3">
+
+  <div class=" cards-list ">
+    <div class="card 1">
+    <div class="card_image">
+      <a href="#"><img style="width:300px;height:400px;" src="{% static 'android_icon.gif'%}" /></a>
+
+      </div>
+    <div class="card_title title-white">
+      <p style="padding:bottom:10px;">Android app development</p>
+    </div>
+  </div>
+  <div class="card 2">
+  <div class="card_image">
+    <a href="#"><img style="width:300px;height:400px;" src="{% static 'ml.gif'%}" /></a>
+
+    </div>
+  <div class="card_title title-white">
+    <p>Machine Learning</p>
+  </div>
+  </div>
+  <div class="card 3">
+  <div class="card_image">
+    <a href="#"><img style="width:300px;height:400px;" src="{% static 'opencv.gif'%}" /></a>
+
+    </div>
+  <div class="card_title title-white">
+    <p>Image Processing</p>
+  </div>
+  </div>
+  <div class="card 4">
+  <div class="card_image">
+    <a href="#"><img style="width:300px;height:400px;" src="{% static 'fullstack.gif'%}" /></a>
+
+    </div>
+  <div class="card_title title-white">
+    <p>Full Stack Web Development</p>
+  </div>
+  </div>
+  </div>
+
+</div>
+
+
+<div class="box " style="margin:5vw;padding:20px">
+<h1 id="cus_font" style="text-align:Center">Projects</h1>
+<p style='text-align:center'>The list of all the projects done by me in the engineering life is available in the list page</p>
+<div class="style-1">
+  <a href="{%url 'basicapp:project_list_view'%}" ><p style="text-align:center;color:white">Read More</p></a>
+</div>
+
+
+
+
+
+</div>
+
+
+</div>
+<style media="screen">
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image:  url("https://scontent.fblr15-1.fna.fbcdn.net/v/t1.0-9/104799112_2712576452327097_132404447986027819_o.jpg?_nc_cat=104&_nc_sid=8bfeb9&_nc_ohc=kOzFvO9uymMAX8Y6X7r&_nc_ht=scontent.fblr15-1.fna&oh=07bc88aec1883e67ce90be722c214735&oe=5F1BAF09");
+
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.jumbotron{
+  max-height:100%;
+  max-width:100%;
+  display:block;
+  object-fit: contain;
+}
+  .cusfon{
+    font-family: 'Itim', cursive;
+    height: fill;
+    width:100%;
+    font-size:5vw;
+    border-radius: 10%;
+    padding: 9vw;
+  }
+  @font-face {
+  font-family: gloss_and_bloom;
+  src:url("{%static 'fonts/Gloss_And_Bloom.ttf'%}");
+}
+#cus_font{
+font-family: 'Satisfy', cursive;
+}
+.style-1 {
+  border:2px solid white;
+  color:white;
+
+  text-transform:uppercase;
+  padding:5px;
+  font-weight:200;
+  max-width:5vw;
+  display:block;
+  text-align:center;
+  margin: auto;
+  position:relative;
+}
+.style-1:hover {
+  background:#000;
+  border-color:white;
+  color:#fff;
+}
+
+
+.welcome{
+            padding:15% 2%;
+              width:100%;
+              height:fill;
+              padding-left:middle;
+              text-align: center;
+              color:black;
+              background-size: cover;
+          }
+.welcome p{
+  font-size:10vw;
+  color:black;
+}
+
+
+          .cards-list {
+      z-index: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      margin: 30px auto;
+      width: 300px;
+      height: 400px;
+      border-radius: 10px;
+    box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.12);
+      cursor: pointer;
+      background-color: black;
+      transition: 0.4s;
+    }
+
+    .card .card_image {
+      width: inherit;
+      height: inherit;
+      border-radius: 10px;
+    }
+
+    .card .card_image img {
+      width: inherit;
+      height: inherit;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .card .card_title {
+      text-align: center;
+      border-radius: 0px 0px 40px 40px;
+
+      font-weight: bold;
+      font-size: 30px;
+      margin-top: -80px;
+      height: 40px;
+    }
+
+    .card:hover {
+      transform: scale(0.9, 0.9);
+      box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.15),
+        -5px -5px 30px 15px rgba(0,0,0,0.22);
+    }
+
+    .title-white {
+      color: white;
+    }
+
+    .title-black {
+      color: black;
+    }
+
+    @media all and (max-width: 500px) {
+      .card-list {
+        /* On small screens, we are no longer using row direction but column */
+        flex-direction: column;
+      }
+    }
+
+    .offer{
+
+
+      padding:15% 2%;
+        width:100%;
+        height:fill;
+        padding-left:middle;
+        text-align: center;
+        color:black;
+        background-size: cover;
+        box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.15),
+          -5px -5px 30px 15px rgba(0,0,0,0.22);
+          background-color: #393E46;
+    }
+    .box{
+      box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.15),
+        -5px -5px 30px 15px rgba(0,0,0,0.22);
+        margin:25px;
+
+
+    }
+    .jumbotron{
+
+    content: fill;
+      margin:40px;
+      box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25),
+        -5px -5px 30px 15px rgba(0,0,0,0.12);
+          border-radius: 10px;
+
+    }
+.jumbotron .container p{
+  text-align: center;
+}
+.fa {
+
+  font-size: 30px;
+  width: 50px;
+  height:50px;
+  padding:10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+.faa:hover {
+    opacity: 0.7;
+}
+#fb{
+  background: #3B5998;
+  color: white;
+}
+#tw {
+  background: #55ACEE;
+  color: white;
+}
+#yt {
+  background: #bb0000;
+  color: white;
+}
+#in {
+  background: #125688;
+  color: white;
+}
+
+
+
+
+
+</style>
+
+{%endblock%}

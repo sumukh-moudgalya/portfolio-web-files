@@ -1,0 +1,132 @@
+{%extends 'html/base.html'%}
+{%load static%}
+
+
+
+
+{%block body_block%}
+<div class="bo">
+<h2 style="text-align:center;margin-top:4vw">List of all the projects done and the semester in which they were completed can be found in this page</h2>
+</div>
+
+  {%for project in project_list%}
+  <div class="box" style="padding:10px;">
+  <h3 >{{project.rank}}:{{project.name}}</h3>
+  <img style="width:40vw;" class="center card" src="{{project.image.url}}" alt="">
+  <h3>Semester: {{project.sem}}</h3>
+  <p>{{project.short_desc}}</p>
+  <div style="padding-bottom:18vw;" class="loop">
+<div id="left">
+
+<a href="{{project.google_drive_link}}"><img style="width:5vw;height:5vw;padding:1vw;"   src="{%static 'drive.png'%}" alt="not found"></a>
+
+
+</div>
+<div id="right">
+ <a style="font-family:'Dancing Script', cursive;font-size:1vw;padding:2vw;color:white" href="{{project.google_drive_link}}" class="style-1">Read More</a>
+
+</div>
+
+
+
+
+</div>
+
+
+</div>
+  {%endfor%}
+
+</div>
+<style media="screen">
+.loop{
+  width:100%;
+
+}
+.card {
+  margin: 30px auto;
+  width: 300px;
+
+  border-radius: 10px;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.12);
+  cursor: pointer;
+  background-color: black;
+  transition: 0.4s;
+}
+
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 10px;
+}
+
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 40px;
+}
+
+.card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.15),
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+
+#left{
+  float:left;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+#left:hover {
+transform: scale(0.9, 0.9);
+box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25),
+-5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+.style-1 {
+  border:0.25vw solid white;
+  color:white;
+
+  text-transform:uppercase;
+
+  font-weight:200;
+  max-width:10vw;
+  display:block;
+  text-align:center;
+
+  position:relative;
+}
+.style-1:hover {
+  background:#000;
+  border-color:white;
+  color:#fff;
+}
+#right{
+  float:right;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:5vw;
+  padding:10px;
+  width: 50%;
+}
+.box{
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.15),
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+    margin:20px;
+
+
+}
+</style>
+{%endblock%}

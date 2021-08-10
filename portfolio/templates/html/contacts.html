@@ -1,0 +1,42 @@
+{%extends 'html/base.html'%}
+{%load static%}
+
+
+
+
+{%block body_block%}
+
+
+<div class="box">
+<h1 style='text-align:center'>Contact Info</h1>
+<img class="center" style="width:200px;height:200px"src="{%static 'circle.png'%}" alt=""></img>
+<h3 >Name:         Sumukh K A Moudgalya</h3>
+<h3>Phone Number:6362755594</h3>
+<h3>Email:sumukhmoudgalya944@gmail.com</h3>
+<h3>Github:<a href="https://github.com/sumukh-moudgalya">https://github.com/sumukh-moudgalya</a></h3>
+<h3>College:JSS Science and Technology University, Mysuru.</h3>
+<h3>Location:Mysore</h3>
+
+</div>
+<style media="screen">
+.box{
+    margin:10vw;
+    border-radius: 10px;
+    box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.12);
+    font-family: 'Itim',cursive;
+  }
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  h3 {
+    text-align:center;
+    margin:50px;
+  }
+  a{
+    color:white;
+  }
+</style>
+{%endblock%}
